@@ -20,10 +20,14 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <nav>
+          <NavLink to='/soda'><h1>Soda</h1></NavLink>
+          <NavLink to='/chips'><h1>Chips</h1></NavLink>
+          <NavLink to='sardines'><h1>Sardines</h1></NavLink>
+        </nav>
         <Switch>
           <Route exact path="/" component={VendingMachine} />
           <Route exact path="/soda" component={Soda} />
-          {/* <Route exact path="/chips" component={Chips} /> */}
           <Route 
             exact path='/chips' 
             render={() => <Chips eatBag={this.eatBag} bagsEaten={this.state.bagsEaten} />} 
