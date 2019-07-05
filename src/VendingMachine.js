@@ -1,7 +1,5 @@
 import React from 'react';
-import Soda from './Soda';
-import Chips from './Chips';
-import Sardines from './Sardines';
+import { Link } from 'react-router-dom';
 
 class VendingMachine extends React.Component {
   render() {
@@ -11,9 +9,9 @@ class VendingMachine extends React.Component {
           <h1>HELLO I AM A VENDING MACHINE. WHAT WOULD YOU LIKE TO EAT?</h1>
         </div>
         <div>
-          <Soda />
-          <Chips />
-          <Sardines />
+          <Link to='/soda'><h1>Soda</h1></Link>
+          <Link to='/chips'><h1>Chips</h1></Link>
+          <Link to='sardines'><h1>Sardines</h1></Link>
         </div>
       </div>
     );
