@@ -11,7 +11,7 @@ class VendingMachine extends React.Component {
         <div>
           <Link to='/soda'><h1>Soda</h1></Link>
           <Link to='/chips'><h1>Chips</h1></Link>
-          <Link to='sardines'><h1>Sardines</h1></Link>
+          <Link to='/sardines'><h1>Sardines</h1></Link>
         </div>
       </div>
     );

@@ -9,9 +9,7 @@ import './App.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      bagsEaten: 0
-    };
+    this.state = {bagsEaten: 0};
     this.eatBag = this.eatBag.bind(this);
   }
   eatBag() {
@@ -21,9 +19,9 @@ class App extends React.Component {
     return (
       <div>
         <nav>
-          <NavLink to='/soda'><h1>Soda</h1></NavLink>
-          <NavLink to='/chips'><h1>Chips</h1></NavLink>
-          <NavLink to='sardines'><h1>Sardines</h1></NavLink>
+          <NavLink exact to='/soda' activeClassName='active'><h1>Soda</h1></NavLink>
+          <NavLink exact to='/chips' activeClassName='active'><h1>Chips</h1></NavLink>
+          <NavLink exact to='/sardines' activeClassName='active'><h1>Sardines</h1></NavLink>
         </nav>
         <Switch>
           <Route exact path="/" component={VendingMachine} />
