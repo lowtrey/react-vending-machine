@@ -1,6 +1,7 @@
 import React from 'react';
 import VendingMachine from './VendingMachine';
-import { Route, NavLink, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+import Navbar from './Navbar';
 import Soda from './Soda';
 import Chips from './Chips';
 import Sardines from './Sardines';
@@ -18,11 +19,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='App'>
-        <nav>
-          <NavLink exact to='/soda' activeClassName='active'><h1>Soda</h1></NavLink>
-          <NavLink exact to='/chips' activeClassName='active'><h1>Chips</h1></NavLink>
-          <NavLink exact to='/sardines' activeClassName='active'><h1>Sardines</h1></NavLink>
-        </nav>
+        <Navbar />
         <Switch>
           <Route exact path="/" render={() => <VendingMachine />} />
           <Route exact path="/soda" render={() => <Soda />} />
