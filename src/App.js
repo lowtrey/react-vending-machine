@@ -17,15 +17,15 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className='App'>
         <nav>
           <NavLink exact to='/soda' activeClassName='active'><h1>Soda</h1></NavLink>
           <NavLink exact to='/chips' activeClassName='active'><h1>Chips</h1></NavLink>
           <NavLink exact to='/sardines' activeClassName='active'><h1>Sardines</h1></NavLink>
         </nav>
         <Switch>
-          <Route exact path="/" component={VendingMachine} />
-          <Route exact path="/soda" component={Soda} />
+          <Route exact path="/" render={() => <VendingMachine />} />
+          <Route exact path="/soda" render={() => <Soda />} />
           <Route 
             exact path='/chips' 
             render={() => <Chips eatBag={this.eatBag} bagsEaten={this.state.bagsEaten} />} 
